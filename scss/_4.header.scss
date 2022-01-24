@@ -1,0 +1,111 @@
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/banner/daniel-leone-g30P1zcOzXo-unsplash.jpg");
+    @extend %flex;
+    @extend %bg;
+
+}
+.content-box {
+    width: 95%;
+    height: 350px;
+    @extend %flex;
+    flex-direction: column;
+
+    &-heading {
+        color: white;
+        font-size:fs(fs-large);
+    }
+
+    &-para {
+        color: white;
+        width: 40%;
+        text-align: center;
+        font-size: calc(0.3rem + 1vw);
+        margin-bottom: 4rem;
+    }
+
+    a {
+        position: relative;
+        z-index: 3;
+        padding: 2rem 3rem;
+        text-align: center;
+        color: white;
+        font-size: calc(0.6rem + 0.6vw);
+        transition: var(--transition-duration);
+        border: 2px solid white;
+
+        &:hover {
+            background-color: white;
+            color: black;
+        }
+    }
+}
+
+
+
+.menu-toggle-container {
+    right: 3rem;
+    position: fixed;
+    top: 15rem;
+    display: flex;
+    align-items: center;
+    z-index: 2000;
+
+    input[type="checkbox"] {
+        margin-bottom: 0.3rem;
+
+        cursor: pointer;
+        position: relative;
+        width: 6rem;
+        height: 3rem;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-color: var(--color-primary);
+        border-radius: 2.5rem;
+        box-shadow: inset 0 0 0.6rem 0.1rem rgb(158, 157, 157);
+        transition: all 0.5s ease-in-out;
+    }
+
+    input:checked[type="checkbox"] {
+        background-color: var(--color-primary);
+    }
+
+    input:not(:checked)[type="checkbox"] {
+        background-color: var(--color-primary);
+    }
+
+    input[type="checkbox"]::before,
+    input[type="checkbox"]::after {
+        content: "";
+        position: absolute;
+        top: 0.8rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        background-color: var(--color-b);
+        box-shadow: 0 0.1rem 0.3rem 0.1rem hsla(0, 0%, 50%, 0.35);
+        transition: all 0.5s ease-in-out;
+    }
+
+    input[type="checkbox"]::after {
+        right: 0.5rem;
+    }
+
+    input[type="checkbox"]::before {
+        left: 0.5rem;
+    }
+
+    input:checked[type="checkbox"]::before {
+        left: 37%;
+        box-shadow: none;
+    }
+
+    input:checked[type="checkbox"]::after {
+        right: 38%;
+        box-shadow: none;
+    }
+}
+
+

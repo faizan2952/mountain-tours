@@ -1,0 +1,35 @@
+.section-services {
+    width: 100%;
+    @extend %sec-padding;
+    @extend %flex;
+    flex-direction: column;
+}
+
+.servicesbox {
+    width: 300px;
+    height: 300px;
+    @extend %flex;
+    flex-direction: column;
+    margin-top: 7vh;
+
+    i {
+        color: black;
+        padding: 1rem 1rem;
+        font-size: 3.5rem;
+        text-align: center;
+        border-radius: 5px;
+        background-color: gainsboro;
+    }
+
+    h2 {
+        letter-spacing: 0.3rem;
+        font-size: calc(1.6rem + 1vw);
+        color: var(--color-b);
+    }
+
+    p {
+        font-size: 1.6rem;
+        text-align: center;
+        color: var(--color-b);
+    }
+}

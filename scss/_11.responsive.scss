@@ -1,0 +1,160 @@
+@include responsive($ipad-pro) {
+
+    .nav {
+        padding: 0vh 3vw;
+
+        &-logo {
+            margin-bottom: 0rem;
+        }
+
+        &-popup {
+            width: 50rem;
+            height: 25rem;
+            padding: 4vh 0vw;
+        }
+    }
+
+    .about-img {
+        width: 600px;
+    }
+
+    .about-contentbox {
+        text-align: center;
+        align-items: center !important;
+    }
+
+    .servicesbox {
+        width: 310px;
+    }
+
+    .gallery-img {
+        width: 512px;
+        height: 300px;
+    }
+
+    .featurebox {
+        width: 550px;
+        margin-top: 8rem;
+    }
+}
+
+
+@include responsive($ipad) {
+
+
+    .navigation {
+        visibility: visible;
+    }
+
+    .nav {
+        justify-content: center;
+
+        &-logo {
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        &-items {
+            display: none;
+        }
+
+        &-icons {
+            display: none;
+        }
+    }
+
+    .featurebox {
+        width: 550px;
+        margin-top: 8rem;
+    }
+
+    .gallery-wrap {
+        justify-content: space-evenly;
+    }
+
+    .gallery-img {
+        margin-top: 5rem;
+    }
+
+}
+
+@include responsive($iphone-x) {
+
+    .about-img {
+        height: 200px;
+    }
+
+    .content-box {
+        &-para {
+            width: 90%;
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .gallery-img {
+        width: 300px;
+        height: 200px;
+    }
+
+    .section-heading {
+        .heading {
+            font-size: 3.5rem;
+        }
+    }
+
+    .featurebox {
+        width: 300px;
+        height: 400px;
+
+        &-heading {
+            font-size: 2.4rem;
+        }
+
+        &-img {
+            height: 200px;
+        }
+
+        h3 {
+            padding: 1rem 1rem;
+            font-size: 1.1rem;
+        }
+    }
+
+    .gallery-wrap {
+        margin-top: 0vh;
+
+        i {
+            top: 75%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .menu-toggle-container {
+        top: 2.8rem;
+        left: 2rem;
+
+        input[type="checkbox"] {
+            width: 4rem;
+            height: 2rem;
+        }
+
+        input[type="checkbox"]::before,
+        input[type="checkbox"]::after {
+            top: 0.6rem;
+            width: 0.8rem;
+            height: 0.8rem;
+        }
+    }
+
+    .input-wrap{
+        width: 90% !important;  
+    }
+    .credit{
+        h3{
+            width: 90%;
+            text-align: center;
+        }
+    }
+}

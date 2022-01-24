@@ -1,0 +1,33 @@
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.9;
+    background-color: var(--color-w);
+    overflow-x: hidden;
+}
+
+.mb-15 {
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+li {
+    list-style: none;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: var(--color-text-dark);
+    font-weight: fw(fw-medium);
+    letter-spacing: 0.2rem;
+    font-size: calc(0.6rem + 0.6vw);
+}
+
+i {
+    // color: white;
+    font-size: fs(fs-medium);
+}

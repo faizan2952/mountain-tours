@@ -1,0 +1,64 @@
+// * Light colors
+html {
+
+    --box-shadow: rgb(238, 238, 238);
+    --color-text: rgb(100, 100, 100);
+    --color-text-light: rgb(37, 37, 37);
+    --color-text-dark: rgb(42, 42, 42);
+
+    ---color-primary: rgb(255, 255, 255);
+   
+    --color-w:white;
+
+    --color-b:black;
+    
+    --color-quinary-m: rgba(255, 255, 255, 0.5);
+
+    --transition-duration: all 0.3s ease-in-out;
+
+}
+
+// * Dark colors
+
+html[data-theme="dark"] {
+
+    --box-shadow: rgb(238, 238, 238);
+    --color-text: rgb(255, 255, 255);
+    --color-text-light: rgb(150, 150, 150);
+    --color-text-dark: rgb(242, 242, 242);
+
+    --color-w:rgb(0, 0, 0);
+
+    ---color-primary: rgb(0, 0, 0);
+
+    --color-b:rgb(255, 255, 255);
+
+    --color-quinary-m: rgba(255, 255, 255, 0.5);
+
+    --transition-duration: all 0.3s ease-in-out;
+
+}
+
+$font-weights: ("fw-thin": 100,
+    "fw-light": 300,
+    "fw-regular": 400,
+    "fw-medium": 500,
+    "fw-bold": 700,
+    "fw-black": 900,
+);
+
+@function fw($font-weight-style) {
+    @return map-get($font-weights, $font-weight-style);
+}
+
+$font-sizes: ("fs-xsmall": calc(0.7rem + 0.3vw),
+    "fs-small": calc(1.3rem + 0.5vw),
+    "fs-regular": calc(1.5rem + 1vw),
+    "fs-medium": calc(1.5rem + 2vw),
+    "fs-large": calc(1.4rem + 4vw),
+    "fs-xlarge": calc(2rem + 5vw),
+);
+
+@function fs($font-size-style) {
+    @return map-get($font-sizes, $font-size-style);
+}
